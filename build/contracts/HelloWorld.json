@@ -1,0 +1,313 @@
+{
+  "contractName": "HelloWorld",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "print",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"print\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/harshkasyap/Desktop/Experiments/ethApp/contracts/HelloWorld.sol\":\"HelloWorld\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/harshkasyap/Desktop/Experiments/ethApp/contracts/HelloWorld.sol\":{\"keccak256\":\"0x03ab0e3a3ccf5094ca0484514693b3fd32163c87c73f31e69ef4809a17750aab\",\"urls\":[\"bzz-raw://4e9fe35be0c4ab50aa26035f7101cba3828889dd87f7804418e5a9be39e3baba\",\"dweb:/ipfs/QmYWMaPJx9Wmjx8oAeNPfLmRwEm56hH2UeLpa4h7uiRKzg\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061011d806100206000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c806313bdfacd14602d575b600080fd5b603360ab565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101560715780820151818401526020810190506058565b50505050905090810190601f168015609d5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b60606040518060400160405280601281526020017f48656c6c6f20576f726c6420205465737421000000000000000000000000000081525090509056fea265627a7a7231582005a11f2a62a4c5e3ae3074f5bd8b887a729b5723d4b029e53e40f3c006db7e6764736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c806313bdfacd14602d575b600080fd5b603360ab565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101560715780820151818401526020810190506058565b50505050905090810190601f168015609d5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b60606040518060400160405280601281526020017f48656c6c6f20576f726c6420205465737421000000000000000000000000000081525090509056fea265627a7a7231582005a11f2a62a4c5e3ae3074f5bd8b887a729b5723d4b029e53e40f3c006db7e6764736f6c63430005100032",
+  "sourceMap": "25:124:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:124:0;;;;;;;",
+  "deployedSourceMap": "25:124:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:124:0;;;;;;;;;;;;;;;;;;;51:96;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;51:96:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;88:13;112:28;;;;;;;;;;;;;;;;;;;51:96;:::o",
+  "source": "pragma solidity 0.5.16;\n\ncontract HelloWorld {\n    function print() public pure returns(string memory){\n        return  \"Hello World  Test!\";\n    }\n}",
+  "sourcePath": "/Users/harshkasyap/Desktop/Experiments/ethApp/contracts/HelloWorld.sol",
+  "ast": {
+    "absolutePath": "/Users/harshkasyap/Desktop/Experiments/ethApp/contracts/HelloWorld.sol",
+    "exportedSymbols": {
+      "HelloWorld": [
+        10
+      ]
+    },
+    "id": 11,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 10,
+        "linearizedBaseContracts": [
+          10
+        ],
+        "name": "HelloWorld",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 8,
+              "nodeType": "Block",
+              "src": "102:45:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "48656c6c6f20576f726c6420205465737421",
+                    "id": 6,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "string",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "120:20:0",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_stringliteral_d513838f15639fecd021da64cbf2bb9fb38ca1c0a2f025f5b489f9005e1f984d",
+                      "typeString": "literal_string \"Hello World  Test!\""
+                    },
+                    "value": "Hello World  Test!"
+                  },
+                  "functionReturnParameters": 5,
+                  "id": 7,
+                  "nodeType": "Return",
+                  "src": "112:28:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 9,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "print",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "65:2:0"
+            },
+            "returnParameters": {
+              "id": 5,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9,
+                  "src": "88:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 3,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "88:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "87:15:0"
+            },
+            "scope": 10,
+            "src": "51:96:0",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 11,
+        "src": "25:124:0"
+      }
+    ],
+    "src": "0:149:0"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/Users/harshkasyap/Desktop/Experiments/ethApp/contracts/HelloWorld.sol",
+      "exportedSymbols": {
+        "HelloWorld": [
+          10
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "0.5",
+            ".16"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            10
+          ],
+          "name": "HelloWorld",
+          "scope": 11
+        },
+        "children": [
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "print",
+              "scope": 10,
+              "stateMutability": "pure",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 2,
+                "name": "ParameterList",
+                "src": "65:2:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 9,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 3,
+                        "name": "ElementaryTypeName",
+                        "src": "88:6:0"
+                      }
+                    ],
+                    "id": 4,
+                    "name": "VariableDeclaration",
+                    "src": "88:13:0"
+                  }
+                ],
+                "id": 5,
+                "name": "ParameterList",
+                "src": "87:15:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 5
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "hexvalue": "48656c6c6f20576f726c6420205465737421",
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "subdenomination": null,
+                          "token": "string",
+                          "type": "literal_string \"Hello World  Test!\"",
+                          "value": "Hello World  Test!"
+                        },
+                        "id": 6,
+                        "name": "Literal",
+                        "src": "120:20:0"
+                      }
+                    ],
+                    "id": 7,
+                    "name": "Return",
+                    "src": "112:28:0"
+                  }
+                ],
+                "id": 8,
+                "name": "Block",
+                "src": "102:45:0"
+              }
+            ],
+            "id": 9,
+            "name": "FunctionDefinition",
+            "src": "51:96:0"
+          }
+        ],
+        "id": 10,
+        "name": "ContractDefinition",
+        "src": "25:124:0"
+      }
+    ],
+    "id": 11,
+    "name": "SourceUnit",
+    "src": "0:149:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.3",
+  "updatedAt": "2021-02-02T12:42:36.427Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

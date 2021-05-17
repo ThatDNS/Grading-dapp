@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Election Results</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container" style="width: 650px;">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="text-center">Grading DApp</h1>
+          <hr />
+          <p id="accountAddress" class="text-center"></p>
+          <div id="pleaserefresh" style="display: none;">
+            <p class="text-center">Please refresh the page</p>
+          </div>
+          <div id="loader">
+            <p class="text-center">Loading...</p>
+          </div>
+          <div id="adminContent" style="display: none;">
+            <h2 class="text-center">Admin Panel</h2>
+            <h3>To add a new Teacher:</h3>
+            <form onSubmit="App.addTeacher(); return false;">
+              <div class="form-group">
+                <label for="teacher_address">Public Key:</label>
+                <input type="text" class="form-control" id="teacherAddressAdmin" placeholder="Enter public key address">
+                <label for="teacher_course">Course:</label>
+                <input type="text" class="form-control" id="teacherCourseAdmin" placeholder="Enter course name">
+              </div>
+              <button type="submit" class="btn btn-primary">Add Teacher</button>
+              <hr />
+            </form>
+            <div id="adminTeachersList">
+              <h4>Current Teachers:</h4>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Public Key</th>
+                    <th scope="col">Course Name</th>
+                  </tr>
+                </thead>
+                <tbody id="teachersAdminTable">
+                </tbody>
+              </table>
+              <hr />
+            </div>
+            <br />
+            <h3>To add a new Student:</h3>
+            <form onSubmit="App.addStudent(); return false;">
+              <div class="form-group">
+                <label for="stud_address">Public Key:</label>
+                <input type="text" class="form-control" id="studentAddressAdmin" placeholder="Enter public key address">
+                <label for="stud_roll_no">Roll No:</label>
+                <input type="text" class="form-control" id="studentRollAdmin" placeholder="Enter Roll No">
+                <label for="stud_name">Name:</label>
+                <input type="text" class="form-control" id="studentNameAdmin" placeholder="Enter Name">
+              </div>
+              <button type="submit" class="btn btn-primary">Add Student</button>
+              <hr />
+            </form>
+            <div id="adminStudentsList">
+              <h4>Current Students:</h4>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Public Key</th>
+                    <th scope="col">Roll Number</th>
+                    <th scope="col">Name</th>
+                  </tr>
+                </thead>
+                <tbody id="studentsAdminTable">
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div id="teacherContent" style="display: none;">
+            <h2 class="text-center">Teacher Panel</h2>
+            <form onSubmit="App.gradeStudent(); return false;">
+              <div class="form-group">
+                <label for="studentSelect">Select Student Roll No</label>
+                <select class="form-control" id="studentRollSelectTeacher">
+                </select>
+                <label for="gradeSelect">Select Grade</label>
+                <select class="form-control" id="gradeSelectTeacher">
+                  <option value="AA">AA</option>
+                  <option value="AB">AB</option>
+                  <option value="BB">BB</option>
+                  <option value="BC">BC</option>
+                  <option value="CC">CC</option>
+                  <option value="CD">CD</option>
+                  <option value="DD">DD</option>
+                  <option value="F">F</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary">Grade</button>
+              <hr />
+            </form>
+            <div id="teacherStudentsList">
+              <h4>Students Graded:</h4>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Roll Number</th>
+                    <th scope="col">Grade</th>
+                  </tr>
+                </thead>
+                <tbody id="studentsTeacherTable">
+                </tbody>
+              </table>
+              <hr />
+            </div>
+          </div>
+          <div id="studentContent" style="display: none;">
+            <h2 class="text-center">Student Panel</h2>
+            <div id="notGradedStudent">
+              <br />
+              <h4 class="text-center">YOU ARE NOT GRADED YET!</h4>
+            </div>
+            <div id="gradedStudent">
+              <h4>Your Grades:</h4>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Course</th>
+                    <th scope="col">Grade</th>
+                  </tr>
+                </thead>
+                <tbody id="studentGradesTable">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
